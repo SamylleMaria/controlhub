@@ -1,0 +1,25 @@
+# Ambiente
+.env
+
+# Uploads dos clientes (fotos das credenciais)
+uploads/*
+!uploads/.gitkeep
+
+# Dependências e cache
+vendor/
+
+# Logs do PHP/Apache
+*.log
+logs/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Docker volumes locais
+mysql_data/
