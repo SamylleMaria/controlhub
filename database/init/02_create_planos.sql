@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS planos (
+    id INT AUTO_INCREMENT PRIMARYKEY,
+    parceiro_id INT NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    tipo ENUM('CARRO', 'MOTO') NOT NULL,
+    preco DECIMAL (10,2) NOT NULL,
+    lav_simples_limite INT NOT NULL DEFAULT 2,
+    lav_COMPLETAS_limite INT NOT NULL DEFAULT 2,
+    criado_em DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (parceiro_id) REFERENCES parceiros(id)
+);

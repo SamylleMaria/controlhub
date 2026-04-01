@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    parceiro_id INT NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    telefone VARCHAR(20) NOT NULL,
+    arquivado BOOLEAN NOT NULL DEFAULT FALSE,
+    criado_em DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (parceiro_id) REFERENCES parceiros(id)
+);
