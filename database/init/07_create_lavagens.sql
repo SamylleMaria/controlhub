@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS lavagens (
     usuario_id INT NOT NULL,
     tipo ENUM('SIMPLES', 'COMPLETA') NOT NULL,
     realizada_em DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (assinatura_id) REFERENCES usuarios(id)
+    FOREIGN KEY (assinatura_id) REFERENCES assinaturas(id),
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
